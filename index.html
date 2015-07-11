@@ -4,16 +4,16 @@
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
-	
+
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="app.css">
 
-	<title>Angello Lite</title>
+	<title>안젤로 Lite</title>
 </head>
 	<body>
 		<div ng-controller="MainCtrl as main">
 			<div class="col-md-4">
-				<h2>Stories</h2>
+				<h2>스토리 목록</h2>
 				<story class="callout"
                        ng-repeat="story in main.stories"
                        ng-click="main.setCurrentStory(story)">
@@ -24,16 +24,16 @@
                 </a>
 			</div>
 			<div class="col-md-6 content">
-				<h2>Story</h2>
+				<h2>스토리</h2>
 				<form class="form-horizontal">
 					<div class="form-group">
-						<label class="control-label" for="inputTitle">Title</label>
+						<label class="control-label" for="inputTitle">제목</label>
 						<div class="controls">
-							<input type="text" class="form-control" id="inputTitle" placeholder="Title" ng-model="main.currentStory.title" />
+							<input type="text" class="form-control" id="inputTitle" placeholder="제목" ng-model="main.currentStory.title" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="inputStatus">Status</label>
+						<label class="control-label" for="inputStatus">상태</label>
 						<div class="controls">
 							<select id="inputStatus" class="form-control" ng-model="main.currentStatus"
 									ng-options="l.name for l in main.statuses"
@@ -41,7 +41,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="inputType">Type</label>
+						<label class="control-label" for="inputType">종류</label>
 						<div class="controls">
 							<select id="inputType" class="form-control" ng-model="main.currentType"
 									ng-options="t.name for t in main.types"
@@ -49,29 +49,29 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="inputDescription">Description</label>
+						<label class="control-label" for="inputDescription">설명</label>
 						<div class="controls">
-							<textarea id="inputDescription" class="form-control" placeholder="Description" rows="3"
+							<textarea id="inputDescription" class="form-control" placeholder="설명" rows="3"
 									  ng-model="main.currentStory.description"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="inputAcceptance">Acceptance Criteria</label>
+						<label class="control-label" for="inputAcceptance">세부 구현 내용</label>
 						<div class="controls">
-							<textarea id="inputAcceptance" class="form-control" placeholder="Acceptance Criteria" rows="3"
+							<textarea id="inputAcceptance" class="form-control" placeholder="세부 구현 내용" rows="3"
 									  ng-model="main.currentStory.criteria"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="inputReporter">Reporter</label>
+						<label class="control-label" for="inputReporter">보고자</label>
 						<div class="controls">
-							<input type="text" class="form-control" id="inputReporter" placeholder="Reporter" ng-model="main.currentStory.reporter" />
+							<input type="text" class="form-control" id="inputReporter" placeholder="보고자" ng-model="main.currentStory.reporter" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label  for="inputAssignee">Assignee</label>
+						<label  for="inputAssignee">담당자</label>
 						<div class="controls">
-							<input type="text" class="form-control" id="inputAssignee" placeholder="Assignee" ng-model="main.currentStory.assignee" />
+							<input type="text" class="form-control" id="inputAssignee" placeholder="담당자" ng-model="main.currentStory.assignee" />
 						</div>
 					</div>
 				</form>
